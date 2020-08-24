@@ -1,0 +1,52 @@
+session_config:
+  session_expiration_time: 0
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- inform
+- widgets
+- search_provider
+- thanks
+entities:
+- location
+- facility_type
+- widget
+slots:
+  address:
+    type: unfeaturized
+  facility_type:
+    type: text
+  location:
+    type: text
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_how_can_i_help:
+  - text: Hello. I am a dashboard. I can help you through dashboard facility. How
+      can I help?
+  utter_ask_widgets:
+  - text: Can you provide your widget name you looking for?
+  - text: To find the {facility_type} I need your widget name.
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_how_can_i_help
+- utter_ask_widgets
+- action_facility_search
