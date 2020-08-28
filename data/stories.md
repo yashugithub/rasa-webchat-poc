@@ -1,47 +1,43 @@
-## hospital search happy path
-* greet
-  - utter_how_can_i_help
-* search_provider{"facility_type":"dashboard", "widget": "Case Breakdown"}
-  - action_facility_search
-  - slot{"address":"Case Breakdown is one of the ESM widget"}
-* thanks
-  - utter_goodbye
 
-## hospital search + location
-* greet
-  - utter_how_can_i_help
-* search_provider{"facility_type":"dashboard"}
-  - utter_ask_widgets
-* inform{"widget":"Case Breakdown"}
-  - action_facility_search
-  - slot{"address":"Case Breakdown is one of the ESM widget"}
-* thanks
-  - utter_goodbye
-
-## happy path
+## grow businsess happy path
 * greet
   - utter_greet
-* mood_great
-  - utter_happy
+* business_help
+  - utter_quarter_report
+* accepted
+  - utter_report_display
+  - utter_to_see_each_customer
+* accepted
+  - action_search_next_customer
+  - utter_close_search_customer
+* ignore
+  - action_search_next_customer
+  - utter_close_search_customer
 
-## sad path 1
+## grow businsess rejected path
+* greet
+ - utter_greet
+* business_help
+  - utter_quarter_report
+* rejected
+  - utter_to_see_each_customer
+* rejected
+  - utter_close_search_customer
+* I_am_done
+  - utter_goodbye_seek_help
+
+## grow businsess accept no and done
 * greet
   - utter_greet
-* mood_unhappy
-  - utter_cheer_up
-  - utter_did_that_help
-* affirm
-  - utter_happy
+* business_help
+  - utter_quarter_report
+* rejected
+  - utter_to_see_each_customer
+* rejected
+  - utter_to_done_or_continue
+* Continue
+  - utter_to_see_each_customer
 
-## sad path 2
-* greet
-  - utter_greet
-* mood_unhappy
-  - utter_cheer_up
-  - utter_did_that_help
-* deny
-  - utter_goodbye
-
-## say goodbye
-* goodbye
-  - utter_goodbye
+## fallback story
+* out_of_scope
+  - action_default_fallback

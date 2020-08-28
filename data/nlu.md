@@ -6,71 +6,52 @@
 - good evening
 - hey there
 
+## intent:business_help
+- I want to grow my business, I would like to get some help from you
+- need help
+- business help
+- grow my business
+- help to grow my business
+- business
+- grow
+- I would like to get some help from you
+- help me to grow
+- help
+- help in business grow
+- need help to grow business
+- help to grow business
+- grow business
+- business grow
+- tips to grow my business
+- tips for business grow
+- tip to grow my business
+- tip for business grow
+- tips
+
+## intent:accepted
+- Yes
+
+## intent:rejected
+- No
+
+## intent:I_am_done
+- I am done
+
+## intent:Continue
+- Continue
+
 ## intent:goodbye
 - bye
 - goodbye
 - see you around
 - see you later
+- have a good day
 
-## intent:inform
-- [Sitka](location)
-- [Juneau](location)
-- [Virginia](location)
-- [Cusseta](location)
-- [Chicago](location)
-- [Tuscon](location)
-- [Columbus](location)
-- [San Francisco](location)
+## intent:ignore
+- Ignore
 
-## intent:widgets
-- [Case Breakdown](widget)
-- [Active List](widget)
-- [Timeline](widget)
-- [Case Load](widget)
-- [EPS](widget)
-- [Productivity](widget)
-- [KPI](widget)
+## intent:thanks
+- Thank you very much
 
-## intent:search_provider
-- I need a [dashboard](facility_type)
-- find info of [dashboard](facility_type)
-- show me [dashboard](facility_type)
-- [dashboard](facility_type)
-- find me [dashboard](facility_type) widget [Case Breakdown](widget)
-
-## intent:affirm
-- yes
-- indeed
-- of course
-- that sounds good
-- correct
-
-## intent:deny
-- no
-- never
-- I don't think so
-- don't like that
-- no way
-- not really
-
-## intent:mood_great
-- perfect
-- very good
-- great
-- amazing
-- wonderful
-- I am feeling very good
-- I am great
-- I'm good
-
-## intent:mood_unhappy
-- sad
-- very sad
-- unhappy
-- bad
-- very bad
-- awful
-- terrible
-- not very good
-- extremely sad
-- so sad
+## intent:add_customer
+- Add

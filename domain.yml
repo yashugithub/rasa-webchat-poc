@@ -3,50 +3,78 @@ session_config:
   carry_over_slots_to_new_session: true
 intents:
 - greet
+- business_help
 - goodbye
-- affirm
-- deny
-- mood_great
-- mood_unhappy
-- inform
-- widgets
-- search_provider
+- accepted
+- rejected
+- I_am_done
+- Continue
+- ignore
 - thanks
-entities:
-- location
-- facility_type
-- widget
-slots:
-  address:
-    type: unfeaturized
-  facility_type:
-    type: text
-  location:
-    type: text
+- add_customer
+- out_of_scope
 responses:
   utter_greet:
-  - text: Hey! How are you?
-  utter_cheer_up:
+  - text: "Hello James How can I help you"
+  utter_quarter_report:
+  - buttons:
+    - payload: /accepted
+      title: Yes
+    - payload: /rejected
+      title: No
+    text: Sure, before I recommend something would you like to see your overall metrics
+      of the last quarter?
+  utter_to_see_each_customer:
+  - buttons:
+    - payload: /accepted
+      title: Yes
+    - payload: /rejected
+      title: No
+    text: would you like to see for each customer, how you can grow your business?
+  utter_to_done_or_continue:
+  - buttons:
+    - payload: /I_am_done
+      title: I am done
+    - payload: /Continue
+      title: Continue
+    text:
+  utter_goodbye_seek_help:
+  - text: Thank you very much, would you like me to help with something else.
+  utter_report_display:
+  - text: Report tiles will be displayed
+  utter_close_search_customer:
+  - buttons:
+    - payload: /ignore
+      title: Ignore
+    - payload: /I_am_done
+      title: I am done
+    text: 
+  utter_image_button_test:
   - image: https://i.imgur.com/nGF1K8f.jpg
     text: 'Here is something to cheer you up:'
-  utter_did_that_help:
-  - text: Did that help you?
-  utter_happy:
-  - text: Great carry on!
+    buttons:
+    - payload: /ignore
+      title: Ignore
   utter_goodbye:
   - text: Bye
-  utter_how_can_i_help:
-  - text: Hello. I am a dashboard. I can help you through dashboard facility. How
-      can I help?
-  utter_ask_widgets:
-  - text: Can you provide your widget name you looking for?
-  - text: To find the {facility_type} I need your widget name.
+  utter_default:
+  - text: Sorry, I did't understand
+  utter_ask_affirmation:
+  - text: Did you mean?
+  utter_ask_rephrase:
+  - text: Please rephrase again
 actions:
 - utter_greet
-- utter_cheer_up
-- utter_did_that_help
-- utter_happy
+- utter_quarter_report
+- utter_to_see_each_customer
+- utter_to_done_or_continue
+- utter_goodbye_seek_help
+- utter_report_display
+- utter_image_button_test
+- action_search_next_customer
+- utter_close_search_customer
+- utter_default
+- utter_ask_affirmation
+- utter_ask_rephrase
 - utter_goodbye
-- utter_how_can_i_help
-- utter_ask_widgets
-- action_facility_search
+
