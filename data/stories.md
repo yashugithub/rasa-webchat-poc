@@ -1,7 +1,7 @@
 
 ## grow businsess happy path
 * greet
-  - utter_greet
+  - action_greet_user
 * business_help
   - utter_quarter_report
 * accepted
@@ -16,7 +16,7 @@
 
 ## grow businsess rejected path
 * greet
- - utter_greet
+ - action_greet_user
 * business_help
   - utter_quarter_report
 * rejected
@@ -28,7 +28,7 @@
 
 ## grow businsess accept no and done
 * greet
-  - utter_greet
+  - action_greet_user
 * business_help
   - utter_quarter_report
 * rejected

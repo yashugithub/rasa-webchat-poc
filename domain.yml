@@ -14,8 +14,6 @@ intents:
 - add_customer
 - out_of_scope
 responses:
-  utter_greet:
-  - text: "Hello James How can I help you"
   utter_quarter_report:
   - buttons:
     - payload: /accepted
@@ -64,7 +62,6 @@ responses:
   utter_ask_rephrase:
   - text: Please rephrase again
 actions:
-- utter_greet
 - utter_quarter_report
 - utter_to_see_each_customer
 - utter_to_done_or_continue
@@ -72,6 +69,7 @@ actions:
 - utter_report_display
 - utter_image_button_test
 - action_search_next_customer
+- action_greet_user
 - utter_close_search_customer
 - utter_default
 - utter_ask_affirmation
